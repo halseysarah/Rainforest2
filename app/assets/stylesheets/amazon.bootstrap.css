@@ -3315,17 +3315,18 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     margin-left: 3px;
 }
 .jumbotron {
-    background-image:url('http://wolnature.com/wp-content/uploads/2014/08/Sunlight-Through-Rainforest-Canopy-10331.jpg');
+    background-image:url('http://s28.postimg.org/k2krqz519/Screen_Shot_2014_09_09_at_7_07_13_PM.png');
     padding: 10px;
     margin-bottom: 50px;
     color: inherit;
     background-color: #eee;
-    height: 300px;
+    height: 200px;
 }
 .jumbotron h1, .jumbotron .h1 {
-    margin-top: 130px;
+    margin-top: 80px;
     color: white;
     position: relative;
+    text-shadow: 2px 2px #000000;    
 }
 
 .nav a {
@@ -3334,13 +3335,15 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
+
 }
 
 .jumbotron p {
-    margin-top: 10px;
+    margin-top: 25px;
     font-size: 21px;
     font-weight: bolder;
-    color: black;
+    color: white;
+    text-shadow: 2px 2px #000000;
 
 }
 .container .jumbotron {

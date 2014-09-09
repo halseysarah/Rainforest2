@@ -1,4 +1,4 @@
-.nav a {
+.nav {
   color: #5a5a5a;
   font-size: 11px;
   font-weight: bold;
@@ -10,12 +10,8 @@
   display: inline;
 }
 
-
 .jumbotron {
-  background-image:url('http://wolnature.com/wp-content/uploads/2014/08/Sunlight-Through-Rainforest-Canopy-10331.jpg');
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url('http://wolnature.com/wp-content/uploads/2014/08/Sunlight-Through-Rainforest-Canopy-10331.jpg');
 }
 
 .jumbotron .container {
@@ -23,12 +19,11 @@
   top:100px;
 }
 
-.jumbotron h1 {
+.jumbotron h2 {
   color: #fff;
   font-size: 48px;  
   font-family: 'Shift', sans-serif;
   font-weight: bold;
-  position: relative;
 }
 
 .jumbotron p {

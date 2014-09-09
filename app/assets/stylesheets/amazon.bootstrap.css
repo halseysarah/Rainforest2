@@ -3315,6 +3315,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     margin-left: 3px;
 }
 .jumbotron {
+    background-image:url('http://wolnature.com/wp-content/uploads/2014/08/Sunlight-Through-Rainforest-Canopy-10331.jpg');
     padding: 10px;
     margin-bottom: 50px;
     color: inherit;
@@ -3322,23 +3323,35 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     height: 300px;
 }
 .jumbotron h1, .jumbotron .h1 {
+    margin-top: 130px;
     color: white;
+    position: relative;
 }
+
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
 .jumbotron p {
-    margin-bottom: 15px;
+    margin-top: 10px;
     font-size: 21px;
-    font-weight: 200;
-    color: #428bca;
+    font-weight: bolder;
+    color: black;
+
 }
 .container .jumbotron {
     border-radius: 6px;
+    font-size: 24px;
 }
 .jumbotron .container {
     max-width: 100%}
 @media screen and (min-width:768px) {
     .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+
 }
 .container .jumbotron {
     padding-left: 60px;
@@ -4546,58 +4559,4 @@ th.visible-print, td.visible-print {
 }
 }
 
-.nav {
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-.nav ul {
-    padding-left: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-.jumbotron {
-    margin-bottom: 0;
-    padding-right: 0;
-    padding-left: 0;
-}
-.jumbotron h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    -webkit-font-smoothing: antialiased;
-    text-shadow:  0 1px 8px rgba(0, 0, 0, 0.6);
-}
-.jumbotron p {
-    margin-top: 0;
-     text-shadow:  0 -1px 1px rgba(0, 0, 0, 0.6);
-}
-.jumbotron a {
-    font-size: 20px;
-    color: #00b0ff;
-}
-.neighborhood-guides h2 {
-    margin-top: 37px;
-}
-.neighborhood-guides .thumbnail {
-    margin: none;
-    padding: none;
-    border: none;
-    background-color: transparent;
-    position: relative;
-}
-.learn-more {
-    padding-top: 25px;
-    padding-bottom: 50px;
-}
-.neighborhood-guides .thumbnail {
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.neighborhood-guides .thumbnail h4 {
-    font-family: Shift, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 29px;
-    color: #fff;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
-    position: absolute;
-    top: 0;
-}
+

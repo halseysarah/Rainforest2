@@ -34,6 +34,7 @@
   </div>
 </div> 
 <br>
+
 <div class="products">
   <div class="container">
   <table class="table table-bordered">
@@ -61,6 +62,13 @@
       <% end %>
     </tbody>
   </table>
+  <br><h4>Still Can't Find What You're Looking For?</h4>
+  <br>
+  <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+  <% end %>
+
 </div>
 </div>
 

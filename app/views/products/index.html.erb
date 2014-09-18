@@ -5,55 +5,73 @@
   <script src="js/bootstrap.min.js"></script>
 </head>
 
-<div class="logo">
-  <div class="container">
-  <img src="http://s18.postimg.org/61z0hpf7t/logo.png">
+  <div class="logo">
+    <div class="container">
+    <img src="http://s18.postimg.org/61z0hpf7t/logo.png">
+    </div>
   </div>
-</div>
 
-<div class="nav"> 
-	<div class="container">
-		<ul class="nav nav-pills pull-left">
+  <div class="nav"> 
+  	<div class="container">
+  		<ul class="nav nav-pills pull-left">
 
-  		<li><a href="/products">Home</a></li>
-  		<li><a href="/products/new/">Add New Product</a></li>
-    </ul>
-    <ul class="nav nav-pills pull-right">
-  		<li><a href="/sessions/new/">Log In</a></li>
-  		<li><a href="/users/new/">Sign Up</a></li>
-  	</ul>
-	</div>
-</div>
-
-<div class="jumbotron">                
-  <div class="container">
-
-    <h1>Outstanding New Novels </h1>
-    <p>From mystery & suspense to drama & romance, there's best sellers for every category</p>
-
+    		<li><a href="/products">Home</a></li>
+    		<li><a href="/products/new/">Add New Product</a></li>
+      </ul>
+      <ul class="nav nav-pills pull-right">
+    		<li><a href="/sessions/new/">Log In</a></li>
+    		<li><a href="/users/new/">Sign Up</a></li>
+    	</ul>
+  	</div>
   </div>
-</div> 
+
+  <div class="jumbotron">                
+    <div class="container">
+
+      <h1>Outstanding New Novels </h1>
+      <p>From mystery & suspense to drama & romance, there's best sellers for every category</p>
+
+    </div>
+  </div> 
 <br>
 
-<div class="products">
-  <div class="container">
-  
-  <div id="products">
-  <%= render @products %>
+  <div class="products">
+    <div class="container">
+    
+      <div id="products">
+      <%= render @products %>
+      </div>
+    
+      <br><h4>Still Can't Find What You're Looking For?</h4>
+      <br>
+      <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search" %>
+      <% end %>
+    </div>
   </div>
-  
-  <br><h4>Still Can't Find What You're Looking For?</h4>
-  <br>
-  <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
-  <% end %>
-
-</div>
-</div>
-
-
-</body>
-</html>
 <br>
+
+<script type="text/javascript">
+  function display_search_results() {
+    // readyState === 4 means that the asynchronous request completed successfully
+    if (this.readyState === 4) {
+      console.log(this);
+      document.getElementById('products').innerHTML = this.responseText;
+    }
+  }
+
+  var form = document.getElementById('search-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var searchValue = document.getElementById('search').value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.onload = display_search_results;
+    xhr.open('GET', '/products?search=' + searchValue, true);
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhr.send();
+  });
+</script>
+
 <hr>

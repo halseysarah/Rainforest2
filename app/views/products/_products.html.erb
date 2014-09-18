@@ -1,9 +1,0 @@
-      <% @products.each do |product| %>
-    		<td><%= product.title %></td>
-    		<td><%= product.author %></td>
-    		<td><%= image_tag product.url, :size => "75x100" %></td>		
-    		<td>$<%= product.price_in_cents %></td>
-    		<td><%= product.description %></td>
-    		<td><%= link_to 'Show', product %></td>
-    		<td><%= link_to 'Edit', edit_product_path(product) %></td>
-    		<td><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
